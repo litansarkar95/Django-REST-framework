@@ -20,10 +20,15 @@ def movie_list(request):
             return Response(serializer.errors)
 
 
-@api_view()
+@api_view(['GET', 'PUT','DELETE'])
 def movie_details(request,pk):
-    movie = Movie.objects.get(pk=pk)
-    serializer = MovieSerializer(movie)
+    if request.method == 'GET':
+     
+     movie = Movie.objects.get(pk=pk)
+     serializer = MovieSerializer(movie)
+     return Response(serializer.data)
+    
+    
 
-    return Response(serializer.data)
+       
 
