@@ -4,7 +4,9 @@ from watchlist_app.models import Movie
 class MovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
-        fields = '__all__'
+        #fields = '__all__'
+        fiels = ['name','description','active']
+      
 
     def validate(self, data):
         if data['title'] == data['description']:
