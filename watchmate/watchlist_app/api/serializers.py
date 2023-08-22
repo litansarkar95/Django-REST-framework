@@ -8,7 +8,7 @@ class MovieSerializer(serializers.ModelSerializer):
         model = Movie
         fields = '__all__'
         #fiels = ['name','description','active']
-        exclude =['name']
+        #exclude =['name']
 
     def get_len_name(self, object):
         length = len(object.name)
