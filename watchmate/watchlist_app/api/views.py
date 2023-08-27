@@ -7,7 +7,6 @@ from rest_framework.views import APIView
 # from rest_framework.decorators import api_view
 
 
-
 class MovieListAV(APIView):
     def get(self,request):
         movies = Movie.objects.all()

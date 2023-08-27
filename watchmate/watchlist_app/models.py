@@ -1,7 +1,6 @@
 from django.db import models
 
 
-
 # Create your models here.
 class Watch(models.Model):
     title = models.CharField(max_length=50)
@@ -15,4 +14,3 @@ class WatchList(models.Model):
 
     def __str__(self):
         return self.title
-  

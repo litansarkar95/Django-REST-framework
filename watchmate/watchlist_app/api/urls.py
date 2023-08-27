@@ -7,3 +7,5 @@ urlpatterns = [
     path("<str:pk>/",MovieDetailsAV.as_view(),name="movie-details"), 
   
 ]
+
+
