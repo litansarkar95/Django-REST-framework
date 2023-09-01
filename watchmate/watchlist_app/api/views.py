@@ -72,7 +72,7 @@ class WatchDetailsAV(APIView):
     def put(self,request,pk):
         try:
             movie = WatchList.objects.get(pk=pk)
-        except WatchList.DoesNotExist():
+        except WatchList.DoesNotExist:
              return Response({'error': " Not found"},status=status.HTTP_404_NOT_FOUND)
             
         
